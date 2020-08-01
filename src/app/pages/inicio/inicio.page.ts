@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
 
 
 @Component({
@@ -21,7 +20,7 @@ export class InicioPage implements OnInit {
       redirectTo: '/alert'
     }
   ]
-  constructor(public actionSheetController: ActionSheetController) { }
+  constructor() { }
 
   ngOnInit() {
   }
