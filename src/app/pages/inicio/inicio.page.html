@@ -5,6 +5,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-button routerLink="/alert" color="primary">Primary</ion-button>
-  <ion-button routerLink="/action-sheet" color="secondary">Secondary</ion-button>
+  <ion-item *ngFor = "let c of componente;" [routerLink]="c.redirectTo" color="primary">
+    <ion-icon slot="add" name="add"></ion-icon>
+    <ion-label>{{c.name}}</ion-label>
+  </ion-item>
+  <ion-button (click)="presentActionSheet()"shape="round">
+    Click me
+  </ion-button>
 </ion-content>
